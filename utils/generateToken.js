@@ -9,8 +9,7 @@ function generateToken(user){
     const token = jwt.sign(
         {
             id: user.id,
-            username: user.username,
-            email: user.email
+            // role: user.role
         },
         process.env.JWT_SECRET,
         {
@@ -21,3 +20,4 @@ function generateToken(user){
 }
 
 export default generateToken
+
